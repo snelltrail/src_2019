@@ -1,0 +1,150 @@
+\documentclass[handout]{beamer}
+\usetheme{Madrid}
+%\mode<presentation>
+
+\usepackage{amsfonts, amsmath, amssymb, bm}
+\renewcommand{\r}{\mathbb{R}}
+\newcommand{\ra}{\rightarrow}
+\renewcommand{\hat}{\widehat}
+\newcommand{\tract}{\mathcal{T}}
+\newcommand{\confmet}{\bm{g}}
+
+\include{daniel_preamble.tex}
+
+\title{CR geometry and its distinguished curves}
+\author[Daniel Snell]{Daniel Snell\\{ \bigskip\bigskip \small Joint work with
+A.\ Rod Gover}}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\section{Introduction}
+\begin{frame}{Introduction - what is CR geometry?}
+  A CR (Cauchy-Riemann or Complex-Real) manifold is a generalization of a real
+  hypersurface in complex $n$-space.
+  \pause
+  It consists of the following data:
+  \begin{itemize}
+    \item a smooth \emph{real} manifold $M$ of dimension $2n+1$ and
+    \item a rank $n$ \emph{complex} subbundle $H \subseteq TM$.
+  \end{itemize}
+  In fact, the above defines an \emph{almost CR manifold}; it is a CR manifold
+  if in addition the distinguished subbundle $H$ is involutive, i.e. $[H,H]
+  \subseteq H$.
+  \pause
+
+  We write $J : H \to H$ for the complex structure on the distinguished subbundle. 
+
+  This complex structure is equivalent to a splitting of the subbundle $H_{\CC}
+  \subseteq T_{\CC}M$ into a direct sub of eigenbundles: $H^{1,0}$ and
+  $H^{0,1}$ which are the $+i$ and $-i$ eigenbundles of $J$ respectively.
+
+  \pause 
+  Finally, there is a Hermitian 
+
+\end{frame}
+
+\begin{frame}{Introduction - Parabolic geometry}
+  CR manifolds are one example from a class of geometries known as
+  \emph{parabolic geometries}.
+  They are modelled on the coset spaces $G/P$ where $G$ is a semisimple Lie
+  group and $P$ is a parabolic subgroup.
+
+  Additionaly, $\mathfrak{g}$, the Lie algebra of $G$, comes with a symmetric
+  grading.
+  In the CR geometry setting, the Lie algebra is 2-graded, meaning the grading
+  takes the form
+  \[
+    \mathfrak{g} = \mathfrak{g}_{-2} \oplus \mathfrak{g}_{-1}\oplus
+    \mathfrak{g}_{0}\oplus\mathfrak{g}_{1}\oplus \mathfrak{g}_{2}.
+  \]
+  The subgroup $P$ has Lie algebra $\mathfrak{p} =
+  \mathfrak{g}_{0}\oplus\mathfrak{g}_{1}\oplus \mathfrak{g}_{2}$.
+  The grading is compatible with the grading in the sense that
+  \[
+    [\mathfrak{g}_\alpha, \mathfrak{g}_\beta] \subseteq \mathfrak{g}_{\alpha +
+    \beta}.
+  \]
+  The structure of a Parabolic geometry is strongly governed by the structure
+  of the Lie algebra and this grading.
+\end{frame}
+
+\begin{frame}{Introduction - Parabolic geometry}
+  The tangent bundle of a parabolic geometry is also realized in terms of
+  the Lie algebra, with the fiber over a point being isomorphic to the quotient
+  of Lie algebras 
+  \[
+    T_x M \cong \mathfrak{g} / \mathfrak{p} \cong
+    \mathfrak{g}_{-2} \oplus \mathfrak{g}_{-1}.
+  \]
+  Elements from different parts of the grading essentially give rise to
+  different classes of distinguished curves on the geometry.
+  Of particular note for us, curves coming from elements of $\mathfrak{g}_{-2}$
+  are called \emph{chains}.
+\end{frame}
+
+\section{Tractor calculus}
+
+\begin{frame}{Tractor bundles}
+  For a given parabolic geometry, one can form certain associated vector bundles
+  which admit an invariant calculus similar to the tensor calculus on Riemannian manifolds.
+  \pause
+
+  These associated vector bundles are called \emph{tractor bundles}, and the
+  invariant calculus one has on them is called the \emph{tractor calculus}.
+
+  As parabolic geometries, conformal and CR 
+
+\end{frame}
+
+\section{CR geometry - origins}
+
+\begin{frame}{Fefferman's original construction}
+  Fefferman was originally motivated by understanding asymptotics of
+  solutions to the heat equation.
+
+  In his original paper, given a CR manifold $M$ of hypersurface type, Fefferman
+  constructs another manifold $\tilde{M}$ which is the total space of a principal
+  $U(1)$-bundle over the original manifold.
+
+  Crucially, $\tilde{M}$ carries a conformal structure which is entirely
+  determined by the CR structure on $M$.
+  The fibers of this bundle are null conformal 
+\end{frame}
+
+\begin{frame}{Tractor version of the original construction}
+  Fefferman's original construction admits an equivalent description in terms of
+  tractor calculus.
+
+  Moreover, the (conformal) tractor bundle of the Fefferman space is related to
+  the (CR) tractor bundle of the underlying manifold.
+
+  In fact, this construction is an example of a more general phenomenon arising
+  from certain special Lie group inclusions $G \hookrightarrow \tilde{G}$.
+
+  In the (classical) Fefferman space setting, 
+  \begin{itemize}
+    \item $G \cong \mathrm{SU}()$ and 
+    \item $\tilde{G} \cong \mathrm{SO}(2p+2, 2q+2)$.
+  \end{itemize}
+
+  \begin{theorem}
+    Let
+  \end{theorem}
+\end{frame}
+
+\begin{frame}{Tractor version of the original construction 2}
+\end{frame}
+\section{Distinguished curves and chains}
+
+\begin{frame}{Chains}
+  As has already been mentioned, chains are a class of distinguished curves
+  which coming from elements of the $\mathfrak{g}_{-2}$ component of the
+  grading.
+\end{frame}
+
+\end{document}
