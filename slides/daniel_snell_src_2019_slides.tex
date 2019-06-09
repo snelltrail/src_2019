@@ -1,4 +1,4 @@
-\documentclass[handout]{beamer}
+\documentclass{beamer}
 \usetheme{Madrid}
 %\mode<presentation>
 
@@ -26,69 +26,76 @@ A.\ Rod Gover}}
 \section{Introduction}
 \begin{frame}{Introduction - what is CR geometry?}
   A CR (Cauchy-Riemann or Complex-Real) manifold is a generalization of a real
-  hypersurface in complex $n$-space.
+  hypersurface in complex space.
+  \vfill
   \pause
   It consists of the following data:
   \begin{itemize}
     \item a smooth \emph{real} manifold $M$ of dimension $2n+1$ and
+      \pause
     \item a rank $n$ \emph{complex} subbundle $H \subseteq TM$.
   \end{itemize}
   %In fact, the above defines an \emph{almost CR manifold}; it is a CR manifold
   %if in addition the distinguished subbundle $H$ is involutive, i.e. $[H,H]
   %\subseteq H$.
   \pause
-
+  \vfill
   We write $J : H \to H$ for the complex structure on the distinguished subbundle. 
 
-  This complex structure is equivalent to a splitting of the complexified subbundle $H_{\CC}
-  \subseteq T_{\CC}M$
-  \[
-    H_\CC = H^{1,0} \oplus H^{0,1}.
-  \]
+  %This complex structure is equivalent to a splitting of the complexified subbundle $H_{\CC}
+  %\subseteq T_{\CC}M$
+  %\[
+  %  H_\CC = H^{1,0} \oplus H^{0,1}.
+  %\]
+  \vfill
   \pause 
-  Moreover, $H$ is a contact distribution, so it can be realized as the kernel
+  The subbundle $H$ is actually a contact distribution, so it can be realized as the kernel
   of a 1-form, called the \emph{contact form}, which we will denote $\theta$.
   There is freedom to rescale the contact form similar to conformal geometry.
   %Finally, there is a Hermitian 
 
 \end{frame}
 
-\begin{frame}{Introduction - Parabolic geometry}
+\begin{frame}{Introduction - parabolic geometry}
   CR manifolds are one example from a class of geometries known as
   \emph{parabolic geometries}.
-  They are modelled on the coset spaces $G/P$ where $G$ is a semisimple Lie
-  group and $P$ is a parabolic subgroup.
+  They are modeled on the coset space $G/P$ where $G$ is a semisimple Lie
+  group and $P \subset G$ is a parabolic subgroup.
+  \pause
+  \vfill
 
-  Additionaly, $\mathfrak{g}$, the Lie algebra of $G$, comes with a symmetric
-  grading.
-  In the CR geometry setting, the Lie algebra is 2-graded, meaning the grading
-  takes the form
+  Additionally, $\mathfrak{g}$, the Lie algebra of $G$, comes with a decomposition
   \[
     \mathfrak{g} = \mathfrak{g}_{-2} \oplus \mathfrak{g}_{-1}\oplus
     \mathfrak{g}_{0}\oplus\mathfrak{g}_{1}\oplus \mathfrak{g}_{2}.
   \]
-  The subgroup $P$ has Lie algebra $\mathfrak{p} =
+  The subgroup $P$ has Lie algebra $\mathfrak{p} :=
   \mathfrak{g}_{0}\oplus\mathfrak{g}_{1}\oplus \mathfrak{g}_{2}$.
-  The bracket is compatible with the grading in the sense that
-  \[
-    [\mathfrak{g}_\alpha, \mathfrak{g}_\beta] \subseteq \mathfrak{g}_{\alpha +
-    \beta}.
-  \]
+  %The bracket is compatible with the grading in the sense that
+  %\[
+  %  [\mathfrak{g}_a, \mathfrak{g}_b] \subseteq \mathfrak{g}_{a +
+  %  b}.
+  %\]
+  %TODO: compatibility between grading and bracket
+  \pause
+  \vfill
   The structure of a Parabolic geometry is strongly governed by the structure
   of the Lie algebra and this grading.
 \end{frame}
 
-\begin{frame}{Introduction - Parabolic geometry and distinguished curves}
-  The tangent bundle of a parabolic geometry is also realized in terms of
+\begin{frame}{Introduction - parabolic geometry and distinguished curves}
+  The tangent bundle of a parabolic geometry can also be expressed in terms of
   the Lie algebra, with the fiber over a point $x \in M$ being isomorphic to the quotient
-  of Lie algebras 
+  \vfill
   \[
     T_x M \cong \mathfrak{g} / \mathfrak{p} \cong
     \mathfrak{g}_{-2} \oplus \mathfrak{g}_{-1}.
   \]
+  \pause
+  \vfill
   Elements from different negative parts of the grading essentially give rise to
   different classes of distinguished curves on the geometry.
-
+  \vfill
   Of particular note, curves coming from elements of $\mathfrak{g}_{-2}$
   are called \emph{chains}.
   Chains are by far the most studied of the distinguished curves available in
@@ -99,31 +106,33 @@ A.\ Rod Gover}}
 
 \begin{frame}{Tractor bundles}
   For a given parabolic geometry, one can form certain associated vector bundles
-  which admit an invariant calculus.
+  which lead to an invariant calculus: the \emph{tractor bundles} and their \emph{tractor calculus}.
   \vfill
-  These associated vector bundles are called \emph{tractor bundles}, and the
-  invariant calculus one has on them is called the \emph{tractor calculus}.
+  \pause
+  %These associated vector bundles are called \emph{tractor bundles}, and the
+  %invariant calculus one has on them is called the \emph{tractor calculus}.
 
-  \vfill
+  %\vfill
   %As parabolic geometries, tractor bundles may be constructed for conformal and
   %CR manifolds.
 
   %\vfill
-  In the case of the CR (co)tractor bundle, after a choice of contact form
+  For example, in the case of the CR (co)tractor bundle, after a choice of contact form
   $\theta$, one obtains the isomorphism
   \[
-    \mathcal{E}_A \overset{\theta}{\cong} \mathcal{E} (1,0) \oplus \mathcal{E}_\alpha
+    \mathcal{E}_\Phi \overset{\theta}{\cong} \mathcal{E} (1,0) \oplus \mathcal{E}_\alpha (1,0)
     \oplus \mathcal{E} (0,-1).
   \]
   \vfill
-  For any parabolic geometry, there is a distinguished invariant bundle map
-  realizing the inclusion $\mathcal{E}(0,-1) \hookrightarrow \mathcal{E}_A$.
+  \pause
+  There is also distinguished invariant bundle map
+  realizing the inclusion $\mathcal{E}(0,-1) \hookrightarrow \mathcal{E}_\Phi$.
   This is called the \emph{canonical} or \emph{position} tractor, and will be
-  denoted by $Z_A$.
+  denoted by $Z_\Phi$.
 
   \vfill
   The CR tractor bundle also carries a signature $(p+1,q+1)$ Hermitian bundle
-  metric $h_{A \overline{B}}$, and a connection which preserves this metric.
+  metric $h_{\Phi \overline{\Psi}}$, and a connection which preserves this metric.
 
 \end{frame}
 
@@ -133,58 +142,77 @@ A.\ Rod Gover}}
   Fefferman's original motivation was to understand the Bergmann kernel and
   Monge-Amp\`{e}re equations.
   \vfill
-  In his original paper, given a CR manifold $M$ of hypersurface type, Fefferman
-  constructs another manifold $\tilde{M}$ which is the total space of a principal
+  \pause
+  In his original paper, given a CR manifold $M$, Fefferman
+  constructed another manifold $\tilde{M}$ which is the total space of a principal
   $U(1)$-bundle over the original manifold.
   \vfill
-  Crucially, $\tilde{M}$ carries a conformal structure which is entirely
+  \pause
+  Additionally, $\tilde{M}$ carries a conformal structure which is entirely
   determined by the CR structure on $M$.
-  The fibers of the bundle $\tilde{M} \to M$ are null conformal Killing vector fields for all
-  metrics in the conformal class on $\tilde{M}$.
+  %The fiber of the bundle $\tilde{M} \to M$ is a null conformal Killing vector field for all
+  %metrics in the conformal class on $\tilde{M}$.
 \end{frame}
 
 \begin{frame}{Tractor version of the original construction}
-  Fefferman's original construction admits an equivalent description in the
+  This \emph{Fefferman space} admits an equivalent description in the
   language of tractor calculus.
-
-  The (conformal) tractor bundle of the Fefferman space is related to
-  the (CR) tractor bundle of the underlying manifold.
-
-  
-
+  \vfill
+  %The (conformal) tractor bundle of the Fefferman space is related to
+  %the (CR) tractor bundle of the underlying manifold in a very concrete way.
+  %\vfill
+  In fact, the entirety of the CR tractor calculus may be described in terms of the (complexified) conformal tractor calculus of its Fefferman space.
+  \vfill 
+  \pause
+  An example of the kind of correspondence one has is the following:
+  \vfill
   \begin{theorem}[\v{C}ap-Gover, 2008]
-    Let
+    The holomorphic holomorphic part $\tilde{Z}^\Phi$ of $X^A \in \left(\Gamma(\tilde{\mathcal{T}}_\CC [-1]\right)$ lies in the subspace $\Gamma(\mathcal{T}(1,0))$, and coincides with the section $Z^\Phi$ mentioned above (the CR canonical tractor).
   \end{theorem}
+  %TODO: mention that one has similar results for other tractor projectors
 \end{frame}
 
-\begin{frame}{Tractor version of the original construction 2}
-\end{frame}
 \section{Distinguished curves}
 
 \begin{frame}{Distinguished curves}
-  \begin{theorem}[Gover-S, 2018]
+  \begin{theorem}[Gover-S, 2019]
     Let $(M,H)$ be a CR manifold and $\gamma$ a curve in $M$. 
     Suppose moreover that the tangent vector of $\gamma$ always lies
     completely in the contact distribution $H$, and that $\gamma$ is null with
     respect to the Levi form. 
-    The above is equivalent to the existence of a 2-tractor $\Sigma^{AB}$ which
+    The above is equivalent to the existence of a CR 2-tractor $\Sigma^{\Phi\Psi}$ which
     is parallel along $\gamma$ and satisfies the incidence relation $Z \wedge
     \Sigma = 0$, where $Z$ is the CR position tractor.
   \end{theorem}
-  This is very similar in appearence to the analogous statements we already
-  have characerizing distinguished curves in conformal and projective geometry!
-  As has already been mentioned, chains are a class of distinguished curves
-  which come from elements of the $\mathfrak{g}_{-2}$ component of the
-  grading. 
-  Moreover, these distinguished curves are equivalently known to be the
-  projections of null geodesics in the Fefferman space. 
+  \vfill
+  \pause
+  This looks very similar to the analogous statements we already
+  have characterizing distinguished curves in conformal and projective geometry!
+
+\end{frame}
+
+\begin{frame}{Distinguished curves}
+  %As has already been mentioned, chains are a class of distinguished curves
+  %which come from elements of the $\mathfrak{g}_{-2}$ component of the Lie algebra. 
+  While chains can be understood via the Lie algebra, classically chains were known to be the projections of null geodesics in the Fefferman space. 
+  Our existing theory of distinguished curves in conformal geometry completely describes such curves!
+  \vfill
+  \pause
+  Our current project involves taking equations for conformal curves on the Fefferman space expressed via conformal tractors, and investigating how they descend to the CR manifold.
+  \vfill
+  This should give a new description of the classically studied chains, as well as new classes of CR distinguished curves.
+  \vfill
+  \pause
+  Note that this approach is not limited to distinguished curves, but will work for any conformally invariant equation!
+  %TODO mention BGG
 \end{frame}
 
 \begin{frame}{Future directions}
   \begin{itemize}
-    \item There are other classes of CR distinguished curves coming from
+    \item There are other classes of CR distinguished curves which come from
       different components of the grading.
     \vfill
+      \pause
     \item In fact, this construction is an example of a more general phenomenon arising
   from certain special Lie group inclusions $G \hookrightarrow \tilde{G}$, with
   \begin{itemize}
