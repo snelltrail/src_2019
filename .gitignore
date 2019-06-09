@@ -1,6 +1,5 @@
 *.bbl
 *.dvi
-*.pdf
 *.gz
 *.fdb_latexmk
 *.nav
