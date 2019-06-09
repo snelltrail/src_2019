@@ -8,6 +8,7 @@
 \renewcommand{\hat}{\widehat}
 \newcommand{\tract}{\mathcal{T}}
 \newcommand{\confmet}{\bm{g}}
+\newcommand{\CC}{\mathbb{C}}
 
 \include{daniel_preamble.tex}
 
@@ -32,19 +33,23 @@ A.\ Rod Gover}}
     \item a smooth \emph{real} manifold $M$ of dimension $2n+1$ and
     \item a rank $n$ \emph{complex} subbundle $H \subseteq TM$.
   \end{itemize}
-  In fact, the above defines an \emph{almost CR manifold}; it is a CR manifold
-  if in addition the distinguished subbundle $H$ is involutive, i.e. $[H,H]
-  \subseteq H$.
+  %In fact, the above defines an \emph{almost CR manifold}; it is a CR manifold
+  %if in addition the distinguished subbundle $H$ is involutive, i.e. $[H,H]
+  %\subseteq H$.
   \pause
 
   We write $J : H \to H$ for the complex structure on the distinguished subbundle. 
 
-  This complex structure is equivalent to a splitting of the subbundle $H_{\CC}
-  \subseteq T_{\CC}M$ into a direct sub of eigenbundles: $H^{1,0}$ and
-  $H^{0,1}$ which are the $+i$ and $-i$ eigenbundles of $J$ respectively.
-
+  This complex structure is equivalent to a splitting of the complexified subbundle $H_{\CC}
+  \subseteq T_{\CC}M$
+  \[
+    H_\CC = H^{1,0} \oplus H^{0,1}.
+  \]
   \pause 
-  Finally, there is a Hermitian 
+  Moreover, $H$ is a contact distribution, so it can be realized as the kernel
+  of a 1-form, called the \emph{contact form}, which we will denote $\theta$.
+  There is freedom to rescale the contact form similar to conformal geometry.
+  %Finally, there is a Hermitian 
 
 \end{frame}
 
@@ -64,7 +69,7 @@ A.\ Rod Gover}}
   \]
   The subgroup $P$ has Lie algebra $\mathfrak{p} =
   \mathfrak{g}_{0}\oplus\mathfrak{g}_{1}\oplus \mathfrak{g}_{2}$.
-  The grading is compatible with the grading in the sense that
+  The bracket is compatible with the grading in the sense that
   \[
     [\mathfrak{g}_\alpha, \mathfrak{g}_\beta] \subseteq \mathfrak{g}_{\alpha +
     \beta}.
@@ -73,78 +78,126 @@ A.\ Rod Gover}}
   of the Lie algebra and this grading.
 \end{frame}
 
-\begin{frame}{Introduction - Parabolic geometry}
+\begin{frame}{Introduction - Parabolic geometry and distinguished curves}
   The tangent bundle of a parabolic geometry is also realized in terms of
-  the Lie algebra, with the fiber over a point being isomorphic to the quotient
+  the Lie algebra, with the fiber over a point $x \in M$ being isomorphic to the quotient
   of Lie algebras 
   \[
     T_x M \cong \mathfrak{g} / \mathfrak{p} \cong
     \mathfrak{g}_{-2} \oplus \mathfrak{g}_{-1}.
   \]
-  Elements from different parts of the grading essentially give rise to
+  Elements from different negative parts of the grading essentially give rise to
   different classes of distinguished curves on the geometry.
-  Of particular note for us, curves coming from elements of $\mathfrak{g}_{-2}$
+
+  Of particular note, curves coming from elements of $\mathfrak{g}_{-2}$
   are called \emph{chains}.
+  Chains are by far the most studied of the distinguished curves available in
+  CR geometry, originating with work of Chern, Moser and Fefferman. 
 \end{frame}
 
 \section{Tractor calculus}
 
 \begin{frame}{Tractor bundles}
   For a given parabolic geometry, one can form certain associated vector bundles
-  which admit an invariant calculus similar to the tensor calculus on Riemannian manifolds.
-  \pause
-
+  which admit an invariant calculus.
+  \vfill
   These associated vector bundles are called \emph{tractor bundles}, and the
   invariant calculus one has on them is called the \emph{tractor calculus}.
 
-  As parabolic geometries, conformal and CR 
+  \vfill
+  %As parabolic geometries, tractor bundles may be constructed for conformal and
+  %CR manifolds.
+
+  %\vfill
+  In the case of the CR (co)tractor bundle, after a choice of contact form
+  $\theta$, one obtains the isomorphism
+  \[
+    \mathcal{E}_A \overset{\theta}{\cong} \mathcal{E} (1,0) \oplus \mathcal{E}_\alpha
+    \oplus \mathcal{E} (0,-1).
+  \]
+  \vfill
+  For any parabolic geometry, there is a distinguished invariant bundle map
+  realizing the inclusion $\mathcal{E}(0,-1) \hookrightarrow \mathcal{E}_A$.
+  This is called the \emph{canonical} or \emph{position} tractor, and will be
+  denoted by $Z_A$.
+
+  \vfill
+  The CR tractor bundle also carries a signature $(p+1,q+1)$ Hermitian bundle
+  metric $h_{A \overline{B}}$, and a connection which preserves this metric.
 
 \end{frame}
 
 \section{CR geometry - origins}
 
 \begin{frame}{Fefferman's original construction}
-  Fefferman was originally motivated by understanding asymptotics of
-  solutions to the heat equation.
-
+  Fefferman's original motivation was to understand the Bergmann kernel and
+  Monge-Amp\`{e}re equations.
+  \vfill
   In his original paper, given a CR manifold $M$ of hypersurface type, Fefferman
   constructs another manifold $\tilde{M}$ which is the total space of a principal
   $U(1)$-bundle over the original manifold.
-
+  \vfill
   Crucially, $\tilde{M}$ carries a conformal structure which is entirely
   determined by the CR structure on $M$.
-  The fibers of this bundle are null conformal 
+  The fibers of the bundle $\tilde{M} \to M$ are null conformal Killing vector fields for all
+  metrics in the conformal class on $\tilde{M}$.
 \end{frame}
 
 \begin{frame}{Tractor version of the original construction}
-  Fefferman's original construction admits an equivalent description in terms of
-  tractor calculus.
+  Fefferman's original construction admits an equivalent description in the
+  language of tractor calculus.
 
-  Moreover, the (conformal) tractor bundle of the Fefferman space is related to
+  The (conformal) tractor bundle of the Fefferman space is related to
   the (CR) tractor bundle of the underlying manifold.
 
-  In fact, this construction is an example of a more general phenomenon arising
-  from certain special Lie group inclusions $G \hookrightarrow \tilde{G}$.
+  
 
-  In the (classical) Fefferman space setting, 
-  \begin{itemize}
-    \item $G \cong \mathrm{SU}()$ and 
-    \item $\tilde{G} \cong \mathrm{SO}(2p+2, 2q+2)$.
-  \end{itemize}
-
-  \begin{theorem}
+  \begin{theorem}[\v{C}ap-Gover, 2008]
     Let
   \end{theorem}
 \end{frame}
 
 \begin{frame}{Tractor version of the original construction 2}
 \end{frame}
-\section{Distinguished curves and chains}
+\section{Distinguished curves}
 
-\begin{frame}{Chains}
+\begin{frame}{Distinguished curves}
+  \begin{theorem}[Gover-S, 2018]
+    Let $(M,H)$ be a CR manifold and $\gamma$ a curve in $M$. 
+    Suppose moreover that the tangent vector of $\gamma$ always lies
+    completely in the contact distribution $H$, and that $\gamma$ is null with
+    respect to the Levi form. 
+    The above is equivalent to the existence of a 2-tractor $\Sigma^{AB}$ which
+    is parallel along $\gamma$ and satisfies the incidence relation $Z \wedge
+    \Sigma = 0$, where $Z$ is the CR position tractor.
+  \end{theorem}
+  This is very similar in appearence to the analogous statements we already
+  have characerizing distinguished curves in conformal and projective geometry!
   As has already been mentioned, chains are a class of distinguished curves
-  which coming from elements of the $\mathfrak{g}_{-2}$ component of the
-  grading.
+  which come from elements of the $\mathfrak{g}_{-2}$ component of the
+  grading. 
+  Moreover, these distinguished curves are equivalently known to be the
+  projections of null geodesics in the Fefferman space. 
+\end{frame}
+
+\begin{frame}{Future directions}
+  \begin{itemize}
+    \item There are other classes of CR distinguished curves coming from
+      different components of the grading.
+    \vfill
+    \item In fact, this construction is an example of a more general phenomenon arising
+  from certain special Lie group inclusions $G \hookrightarrow \tilde{G}$, with
+  \begin{itemize}
+    \item $G \cong \mathrm{SU}(p,q)$ and 
+    \item $\tilde{G} \cong \mathrm{SO}(2p+2, 2q+2)$.
+  \end{itemize}
+  in the (classical) Fefferman space setting.
+
+  This should allow the distinguished curves of other geometries admitting a
+  Fefferman-type construction to be described in a similar way, e.g. c-projective
+  geometry.
+  \vfill
+  \end{itemize}
 \end{frame}
 
 \end{document}
